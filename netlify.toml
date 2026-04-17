@@ -1,6 +1,6 @@
 [build]
   command = "echo 'Static site: no build step required'"
-  publish = "public"
+  publish = "."
 
 [build.processing]
   skip_processing = false
@@ -14,3 +14,8 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "DENY"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
